@@ -97,8 +97,8 @@ curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, array(
     'x' => $provinsiId,
     'y' => $kabkotId,
-    'bln' => 1,
-    'thn' => 2023,
+    'bln' =>date("n") , // untuk bulan sekarang
+    'thn' =>date("Y")  //untuk tahun sekarang
 ));
 $response = curl_exec($ch);
 curl_close($ch);
